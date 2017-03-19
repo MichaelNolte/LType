@@ -11,7 +11,16 @@
     <style name="PopUp">
         <item name="android:paddingTop">24dp</item>
         <item name="android:paddingBottom">48dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="PopUp.VerticalDivider">
+        <item name="android:orientation">vertical</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@drawable/divider</item>
     </style>
 
     <style name="Icon">

@@ -16,18 +16,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="WHAT LEARNING TYPE ARE YOU? \nUSE THIS APP TO FIND OUT"
-            android:textSize="18sp"
+            android:text="@string/app_title_slogan"
+            android:textSize="16sp"
             android:textAlignment="center"
             android:fontFamily="sans-serif-black"
-            android:paddingBottom="32dp"/>
+            android:paddingBottom="@dimen/standard_padding"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Why use this App?"/>
+            android:onClick="popUpAppDescription"
+            android:text="@string/button_app_description"/>
 
         <TextView
+            android:id="@+id/app_description_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_description"
@@ -36,12 +38,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="information on learning styles"/>
+            android:onClick="popUpLearningTypeInfo"
+            android:text="@string/button_learning_styles"/>
 
         <LinearLayout
+            android:id="@+id/type_description_linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             style="@style/PopUp">
 
             <LinearLayout
@@ -58,7 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The visual learner absorbs information with his eyes. "/>
+                    android:text="@string/visual_style"/>
 
             </LinearLayout>
 
@@ -76,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The auditory learner absorbs information with his ears. "/>
+                    android:text="@string/auditory_style"/>
 
             </LinearLayout>
 
@@ -92,9 +95,10 @@
                     style="@style/Icon"/>
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The auditory learner absorbs information with his ears. "/>
+                    android:text="@string/kinesthetic_style" />
 
             </LinearLayout>
 
@@ -103,7 +107,219 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="determine your learning style"/>
+            android:onClick="popUpQuestionaire"
+            android:text="@string/button_questionaire"/>
+
+        <LinearLayout
+            android:id="@+id/questionaire_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="32dp"
+                android:text="@string/questionaire_instructions" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter your name"
+                android:inputType="textMultiLine" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:shrinkColumns="0"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_questionaire">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text=""
+                        />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="false"
+                        android:padding="5dp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="somewhat\ntrue"
+                        android:textAlignment="center"
+                        android:padding="5dp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="true"
+                        android:padding="5dp"
+                        android:textColor="#000000"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_li"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_lii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_liii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_si"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_sii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_visual_siii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                    <CheckBox
+                        android:layout_gravity="center"
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
