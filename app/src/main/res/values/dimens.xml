@@ -6,4 +6,5 @@
 
     <dimen name="standard_padding">32dp</dimen>
     <dimen name="questionaire_padding">8dp</dimen>
+    <dimen name="button_width">50dp</dimen>
 </resources>

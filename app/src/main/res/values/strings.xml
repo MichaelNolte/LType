@@ -2,18 +2,22 @@
     <string name="app_name">LType</string>
 
     <string name="app_title_slogan">WHAT LEARNING TYPE ARE YOU? \nUSE THIS APP TO FIND OUT</string>
-    <string name="button_app_description">What this app is for</string>
-    <string name="button_learning_styles">Understand learning styles</string>
-    <string name="button_questionaire">Determine your learning style</string>
 
+    <string name="button_app_description">What this app is for</string>
     <string name="app_description">Different people have different styles of learning. The VAK model holds that people absorb information in a visual, an auditory, and a kinesthetic way.\n\nYour educator should know what kind of learner you are to adapt his teaching to your individual needs.\n\nThis app will give you questions to determine your learning style and allows you to send this information to your educator.</string>
 
+    <string name="button_learning_styles">Understand learning styles</string>
     <string name="visual_style">Visual learners prefer to absorb information with their eyes. That means they find it easier to learn by reading (visual-linguistic learner) or looking at charts, images, and other visual items (visual-spatial learner).</string>
     <string name="auditory_style">Auditory learners prefer to absorb information with their ears. That means they find it easier to learn by listening to someone speak or lecture.</string>
     <string name="kinesthetic_style">Kinesthetic learners prefer to absorb information by movement and touching. That means that they have to do something to learn and keep involved in learning processes by being physically engaged.</string>
 
+    <string name="button_questionaire">Determine your learning style</string>
 
     <string name="questionaire_instructions">Please answer the following questions to determine your learning type:</string>
+
+    <string name="scale_description0">NEVER\nTRUE</string>
+    <string name="scale_description1">SOME-\nTIMES\nTRUE</string>
+    <string name="scale_description2">ALWAYS\nTRUE</string>
 
     <string name="question_visual_li">I am good at remembering written instructions.</string>
     <string name="question_visual_lii">I like reading books.</string>
@@ -22,5 +26,17 @@
     <string name="question_visual_sii">I have a good sense of orientation and reading maps.</string>
     <string name="question_visual_siii">I have an interest in visual arts.</string>
 
+    <string name="question_auditory_i">I am good at remembering lectures or talks.</string>
+    <string name="question_auditory_ii">I like listening to music.</string>
+    <string name="question_auditory_iii">When I think of a word I hear it in my head.</string>
+    <string name="question_auditory_iv">I prefer the radio news broadcast to reading a paper.</string>
+    <string name="question_auditory_v">I enjoy talking to people.</string>
+    <string name="question_auditory_vi">I have excellent verbal abilities.</string>
 
+    <string name="question_kinesthetic_i">I remember things best when I do them.</string>
+    <string name="question_kinesthetic_ii">I like sports, dance, or other physical activities.</string>
+    <string name="question_kinesthetic_iii">I have difficulties to sit and listen without being involved in something else.</string>
+    <string name="question_kinesthetic_iv">I frequently use gestures when speaking.</string>
+    <string name="question_kinesthetic_v">I like to use color high lighters.</string>
+    <string name="question_kinesthetic_vi">I like to experiment hands-on and usually do not look at instructions.</string>
 </resources>

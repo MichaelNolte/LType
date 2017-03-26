@@ -45,7 +45,8 @@
             android:id="@+id/type_description_linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/PopUp">
+            android:orientation="vertical"
+            style="@style/PopUp.VerticalDivider">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,9 +60,10 @@
                     style="@style/Icon"/>
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/visual_style"/>
+                    android:text="@string/visual_style" />
 
             </LinearLayout>
 
@@ -95,7 +97,6 @@
                     style="@style/Icon"/>
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/kinesthetic_style" />
@@ -114,7 +115,8 @@
             android:id="@+id/questionaire_linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            style="@style/PopUp">
 
 
             <TextView
@@ -133,6 +135,9 @@
                 android:inputType="textMultiLine" />
 
 
+
+            <!--QUESTIONAIRE Part1 - Visual-->
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -150,54 +155,77 @@
                         android:text=""
                         />
 
-                    <TextView
-                        android:layout_gravity="center_vertical"
-                        android:text="false"
-                        android:padding="5dp"
-                        android:textColor="#000000"/>
+                    <LinearLayout
+                        android:layout_gravity="center">
 
-                    <TextView
-                        android:layout_gravity="center"
-                        android:text="somewhat\ntrue"
-                        android:textAlignment="center"
-                        android:padding="5dp"
-                        android:textColor="#000000"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description0"
+                            style="@style/QuestionaireScaleDescription"
+                            />
 
-                    <TextView
-                        android:layout_gravity="center_vertical"
-                        android:text="true"
-                        android:padding="5dp"
-                        android:textColor="#000000"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description1"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description2"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                    </LinearLayout>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
 
                     <TextView
-                        android:layout_gravity="center_vertical"
                         android:text="@string/question_visual_li"
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup"
+                        >
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_li1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLi"
+                            style="@style/QuestionaireRadioButton"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_li2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLi"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_vis_li3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLi"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
 
                     <TextView
                         android:layout_gravity="center_vertical"
@@ -205,23 +233,37 @@
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_lii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLii"
+                            style="@style/QuestionaireRadioButton"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_lii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLii"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_vis_lii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLii"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
 
                     <TextView
                         android:layout_gravity="center_vertical"
@@ -229,17 +271,32 @@
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_liii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLiii"
+                            style="@style/QuestionaireRadioButton"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_liii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLiii"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_vis_liii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisLiii"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
 
                 </TableRow>
 
@@ -253,17 +310,31 @@
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_si1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSi"
+                            style="@style/QuestionaireRadioButton"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_si2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSi"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_vis_si3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSi"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
 
                 </TableRow>
 
@@ -277,17 +348,31 @@
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_sii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSii"
+                            style="@style/QuestionaireRadioButton"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <RadioButton android:id="@+id/ques_vis_sii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSii"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_vis_sii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSii"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
 
                 </TableRow>
 
@@ -301,21 +386,604 @@
                         android:textColor="#000000"
                         android:paddingRight="16dp"/>
 
-                    <CheckBox
-                        android:layout_gravity="center"
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton
+                            android:id="@+id/ques_vis_siii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSiii"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_vis_siii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSiii"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_vis_siii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonVisSiii"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+                </TableRow>
+            </TableLayout>
+
+
+
+            <!--QUESTIONAIRE Part2 - Auditory-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:shrinkColumns="0"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_questionaire">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text=""
                         />
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                    <LinearLayout
+                        android:layout_gravity="center">
 
-                    <CheckBox
-                        android:layout_gravity="center"
-                        />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description0"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description1"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description2"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                    </LinearLayout>
 
                 </TableRow>
 
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:text="@string/question_auditory_i"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup"
+                        >
+
+                        <RadioButton android:id="@+id/ques_aud_i1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_i2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_i3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudI"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_auditory_ii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_aud_ii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_ii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_ii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudII"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_auditory_iii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_aud_iii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_iii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_iii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIII"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_auditory_iv"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_aud_iv1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_iv2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_iv3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudIV"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_auditory_v"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_aud_v1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_v2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_aud_v3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudV"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_auditory_vi"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton
+                            android:id="@+id/ques_aud_vi1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudVI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_aud_vi2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudVI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_aud_vi3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonAudVI"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+                </TableRow>
             </TableLayout>
+
+
+
+            <!--QUESTIONAIRE Part3 - Kinesthetic-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:shrinkColumns="0"
+                android:showDividers="middle"
+                android:divider="@drawable/divider_questionaire">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:text=""
+                        />
+
+                    <LinearLayout
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description0"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description1"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/button_width"
+                            android:text="@string/scale_description2"
+                            style="@style/QuestionaireScaleDescription"
+                            />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:text="@string/question_kinesthetic_i"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup"
+                        >
+
+                        <RadioButton android:id="@+id/ques_kin_i1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_i2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_i3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinI"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_kinesthetic_ii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_kin_ii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_ii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_ii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinII"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_kinesthetic_iii"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_kin_iii1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_iii2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIII"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_iii3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIII"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_kinesthetic_iv"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_kin_iv1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_iv2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_iv3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinIV"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_kinesthetic_v"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton android:id="@+id/ques_kin_v1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_v2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinV"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton android:id="@+id/ques_kin_v3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinV"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/question_kinesthetic_vi"
+                        android:textColor="#000000"
+                        android:paddingRight="16dp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/QuestionaireRadioGroup">
+
+                        <RadioButton
+                            android:id="@+id/ques_kin_vi1"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinVI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_kin_vi2"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinVI"
+                            style="@style/QuestionaireRadioButton"/>
+
+                        <RadioButton
+                            android:id="@+id/ques_kin_vi3"
+                            android:layout_width="@dimen/button_width"
+                            android:layout_height="wrap_content"
+                            android:onClick="questionButtonKinVI"
+                            style="@style/QuestionaireRadioButton"/>
+                    </RadioGroup>
+
+                </TableRow>
+            </TableLayout>
+
+
 
         </LinearLayout>
 
