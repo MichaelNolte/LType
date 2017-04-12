@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">LType</string>
 
     <string name="app_title_slogan">WHAT LEARNING TYPE ARE YOU? \nUSE THIS APP TO FIND OUT</string>
@@ -6,14 +6,14 @@
     <string name="button_app_description">What this app is for</string>
     <string name="app_description">Different people have different styles of learning. The VAK model holds that people absorb information in a visual, an auditory, and a kinesthetic way.\n\nYour educator should know what kind of learner you are to adapt his teaching to your individual needs.\n\nThis app will give you questions to determine your learning style and allows you to send this information to your educator.</string>
 
-    <string name="button_learning_styles">Understand learning styles</string>
+    <string name="button_learning_styles">Understand learning types</string>
     <string name="visual_style">Visual learners prefer to absorb information with their eyes. That means they find it easier to learn by reading (visual-linguistic learner) or looking at charts, images, and other visual items (visual-spatial learner).</string>
     <string name="auditory_style">Auditory learners prefer to absorb information with their ears. That means they find it easier to learn by listening to someone speak or lecture.</string>
     <string name="kinesthetic_style">Kinesthetic learners prefer to absorb information by movement and touching. That means that they have to do something to learn and keep involved in learning processes by being physically engaged.</string>
 
-    <string name="button_questionaire">Determine your learning style</string>
+    <string name="button_questionaire">Determine your learning type</string>
 
-    <string name="questionaire_instructions">Please answer the following questions to determine your learning type:</string>
+    <string name="questionaire_instructions">Select the appropriate button after each statement. Push the "FINISH" button when you have responded to all statements.</string>
 
     <string name="scale_description0">NEVER\nTRUE</string>
     <string name="scale_description1">SOME-\nTIMES\nTRUE</string>
@@ -39,4 +39,40 @@
     <string name="question_kinesthetic_iv">I frequently use gestures when speaking.</string>
     <string name="question_kinesthetic_v">I like to use color high lighters.</string>
     <string name="question_kinesthetic_vi">I like to experiment hands-on and usually do not look at instructions.</string>
+
+    <string name="button_finish_questionaire">Finish</string>
+
+    <string name="analysis_for">Learning Type Analysis for <xliff:g id="name" example="Amy Schumer" >%1$s</xliff:g></string>
+
+    <string name="equally_distributed">Our analysis indicates that every learning style suits the test taker. Visual, auditory, and kinesthetic learning type features are equally developed.</string>
+
+    <string name="vis_lin_vis_spa">visual-linguistic and visual-spatial learning type</string>
+    <string name="vis_lin">visual-linguistic learning type</string>
+    <string name="vis_spa">visual-spatial learning type</string>
+    <string name="vis">visual learning type</string>
+    <string name="aud">auditory learning type</string>
+    <string name="kin">kinesthetic learning type</string>
+    <string name="aud_abbrev">auditory</string>
+    <string name="vis_abbrev">visual</string>
+
+    <string name="add_n">n </string>
+    <string name="add_space"> </string>
+
+    <string name="toast_no_clients">There are no email clients installed.</string>
+    <string name="send_mail">Send mail</string>
+    <string name="double_break">\n\n</string>
+    <string name="result">RESULT: </string>
+    <string name="description">DESCRIPTION: </string>
+    <string name="of_points"> of 12 points.\n</string>
+    <string name="results_visual">Visual Learning Type: </string>
+    <string name="results_auditory">Auditory Learning Type: </string>
+    <string name="results_kinesthetic">Kinesthetic Learning Type: </string>
+    <string name="is_a"> is a</string>
+    <string name="and"> and </string>
+
+    <string name="other_features">The test taker also shows features of other learning types. See his score results on top of this message for more information.</string>
+    <string name="also_shows_vis"> also shows features of the visual learning type.</string>
+    <string name="also_shows_aud"> also shows features of the auditory learning type.</string>
+    <string name="also_shows_kin"> also shows features of the kinesthetic learning type.</string>
+
 </resources>

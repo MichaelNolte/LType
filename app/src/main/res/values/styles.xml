@@ -9,7 +9,7 @@
     </style>
 
     <style name="PopUp">
-        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingTop">@dimen/standard_padding</item>
         <item name="android:paddingBottom">48dp</item>
         <item name="android:textSize">14sp</item>
         <item name="android:paddingLeft">16dp</item>
@@ -31,10 +31,10 @@
     <style name="QuestionaireScaleDescription">
         <item name="android:layout_gravity">center</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:paddingTop">32dp</item>
+        <item name="android:paddingTop">@dimen/standard_padding</item>
         <item name="android:paddingLeft">5dp</item>
         <item name="android:paddingRight">5dp</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">@dimen/questionaire_scale_description_text_size</item>
         <item name="android:textColor">#000000</item>
     </style>
 
@@ -43,10 +43,19 @@
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
+    <style name="QuestionaireSectionDivider">
+        <item name="android:paddingTop">@dimen/standard_padding</item>
+    </style>
+
     <style name="QuestionaireRadioButton">
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">@dimen/questionaire_padding</item>
+        <item name="android:paddingRight">@dimen/questionaire_padding</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="SendButton">
+        <item name="android:layout_marginTop">@dimen/standard_padding</item>
+        <item name="android:layout_marginBottom">@dimen/standard_padding</item>
     </style>
 
 </resources>

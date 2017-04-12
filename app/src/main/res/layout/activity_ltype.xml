@@ -127,12 +127,13 @@
                 android:text="@string/questionaire_instructions" />
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/name_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:hint="Enter your name"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                />
 
 
 
@@ -149,9 +150,12 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    style="@style/QuestionaireSectionDivider"
                     >
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:text=""
                         />
 
@@ -432,9 +436,12 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    style="@style/QuestionaireSectionDivider"
                     >
 
                     <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
                         android:text=""
                         />
 
@@ -715,9 +722,12 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    style="@style/QuestionaireSectionDivider"
                     >
 
                     <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
                         android:text=""
                         />
 
@@ -983,12 +993,14 @@
                 </TableRow>
             </TableLayout>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_finish_questionaire"
+                android:onClick="composeEmail"
+                style="@style/SendButton"/>
 
 
         </LinearLayout>
-
-
-
     </LinearLayout>
-
 </ScrollView>
